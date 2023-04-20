@@ -20,7 +20,7 @@ const Timeline = ({ events }) => {
 
         return (
           <div key={index} className="timeline-label-wrapper" style={{ marginLeft }}>
-            <TimelineLabel topText={event.topText} bottomText={event.bottomText} />
+            <TimelineLabel topText={event.topText} bottomText={event.bottomText} settings={event.settings}/>
           </div>
         );
       })}
