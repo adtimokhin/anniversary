@@ -5,6 +5,7 @@ const TimelineLabel = ({ topText, bottomText, settings }) => {
   const labelRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
+  // all of the customizable properties
   const size = settings?.size || 200;
   const textColor = settings?.textColor || '#9da3a3';
   const hoverTextColor = settings?.hoverTextColor || '#cfd6d6';
