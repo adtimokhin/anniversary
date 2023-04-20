@@ -1,0 +1,10 @@
+.timeline {
+    display: flex;
+    width: fit-content;
+    height: 200px;
+  }
+  
+  .timeline-label-wrapper {
+    position: relative;
+  }
+  

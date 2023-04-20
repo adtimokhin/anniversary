@@ -1,0 +1,53 @@
+#progrss-bar-holder {
+  top: 47%;
+  left: 35%;
+  transform: translateY(2vh);
+  animation: progress-bar-drop-down 2s ease-in 0s 1,
+    remove-progress-bar 2s linear 8s 1;
+}
+
+#progress-bar {
+  animation: load-play 5s linear 2s 1;
+}
+
+#loading-screen-background {
+  animation: fade-background-after-loading 1.5s linear 10s 1;
+}
+
+@keyframes fade-background-after-loading {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: #080808;
+  }
+}
+
+@keyframes progress-bar-drop-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(2vh);
+  }
+}
+
+@keyframes remove-progress-bar {
+  from {
+    width: 30%;
+    left: 35%;
+  }
+  to {
+    width: 0%;
+    left: 50%;
+  }
+}
+
+@keyframes load-play {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
