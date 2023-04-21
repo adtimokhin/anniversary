@@ -4,6 +4,7 @@ import Timeline from "./components/Timeline/Timeline";
 import TimelineLabel from "./components/TimelineLabel/TimelineLabel";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 import TimelinePage from "./pages/TimelinePage";
+import EventPage from "./pages/EventPage";
 function App() {
   const [currentScreen, setCurrentScreen] = useState(
     <LoadingScreen
@@ -72,9 +73,9 @@ function App() {
   );
 
   return (
-    <div className="App h-screen bg-[#080808]" style={{ width: "20000px" }}>
+    <div className="App h-screen bg-[#080808] w-[20000px]">
       {/* TODO: Replace with {currentPage} when finished testing */}
-      <TimelinePage
+      {/* <TimelinePage
         events={[
           {
             topText: "свадьба",
@@ -131,7 +132,9 @@ function App() {
             month: 3,
           },
         ]}
-      />
+      /> */}
+
+      <EventPage/>
     </div>
   );
 }

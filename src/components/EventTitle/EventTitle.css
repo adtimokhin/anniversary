@@ -1,0 +1,22 @@
+.event-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #cfd6d6;
+  }
+  
+  .glow-line-container {
+    flex-grow: 1;
+  }
+  
+  .event-title-text {
+    display: inline-block;
+    flex-grow: 0; /* Set this value to 0 */
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 2rem;
+    font-size: 48px;
+  }
+  

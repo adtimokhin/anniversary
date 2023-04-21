@@ -10,6 +10,7 @@ function TimelinePage({events}) {
         top: "50%",
         marginLeft: "50vw",
         transform: "translateY(-50%)",
+        backgroundColor: "#080808"
       }}
       className="absolute"
     >
