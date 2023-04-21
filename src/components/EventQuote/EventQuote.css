@@ -1,0 +1,22 @@
+.event-quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    color: #cfd6d6;
+    font-weight: 900;
+    font-size: 52px;
+  }
+ 
+  .quote-symbol {
+    line-height: 0.8;
+  }
+  
+  .quote-start {
+    margin-right: 0.7rem;
+  }
+  
+  .quote-end {
+    margin-left: 0.7rem;
+  }
+  
