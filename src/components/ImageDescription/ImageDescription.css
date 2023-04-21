@@ -1,0 +1,21 @@
+.image-description-container {
+    text-align: center;
+    color: #9da3a3;
+    width: 100%;
+    padding: 1rem 0;
+    display:inline-block; /* <-- display 'in a row' */ 
+  }
+  
+  .image-description-top,
+  .image-description-bottom {
+    font-size: 2rem;
+  }
+  
+  .image-description-top {
+    font-weight: 800;
+  }
+  
+  .image-description-bottom {
+    font-weight: 200;
+  }
+  

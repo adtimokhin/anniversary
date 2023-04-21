@@ -1,0 +1,23 @@
+.outer-frame {
+    border: 8px solid #e4f5f5;
+    display: inline-block;
+    
+  }
+  
+  .middle-frame {
+    border: 8px solid #080808;
+    display: inline-block;
+  }
+  
+  .inner-frame {
+    border: 4px solid #cfd6d6;
+    display: inline-block;
+  }
+  
+  .event-image {
+    display: block;
+    width: 40vw;
+    height: auto;
+    object-fit: contain;
+  }
+  
