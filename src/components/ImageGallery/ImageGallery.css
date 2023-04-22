@@ -30,3 +30,13 @@
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0);
   transition: box-shadow 0.3s ease-in;
 }
+
+.gallery-image.placeholder {
+  background-color: #121213;
+  object-fit: none; /* Remove this line if you want to use a low-quality blurred version of the image */
+}
+
+.gallery-image.loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
