@@ -2,6 +2,8 @@ import EventLargeImage from "../components/EventLargeImage/EventLargeImage";
 import EventQuote from "../components/EventQuote/EventQuote";
 import EventTitle from "../components/EventTitle/EventTItle";
 import ImageDescription from "../components/ImageDescription/ImageDescription";
+import ImageQuoteLayout from "../components/layout/ImageQuoteLayout/ImageQuoteLayout";
+import QuoteLayout from "../components/layout/QuoteLayout/QuoteLayout";
 
 function EventPage(){
 
@@ -11,19 +13,11 @@ function EventPage(){
             <EventLargeImage imageUrl={"pexels-phil-desforges-15185102.jpg"}/>
             <ImageDescription topText={"Text description"} bottomText={"Meh"}/>
         </div>
-        <div>
-            <EventQuote quoteText={"- Костей потом не соберем!"}/>
-        </div>
 
-        <div className="image-quote inline-flex">
-        <div className="w-[40vw] image-wrapper inline-block">
-            <EventLargeImage imageUrl={"pexels-phil-desforges-15185102.jpg"}/>
-            <ImageDescription topText={"Text description"} bottomText={"Meh"}/>
-        </div>
-        <div className="flex justify-center items-center m-5">
-            <EventQuote quoteText={"- Костей потом не соберем!"}/>
-        </div>
-        </div>
+        <QuoteLayout quote="Quote"/>
+
+        <ImageQuoteLayout imageUrl={"pexels-phil-desforges-15185102.jpg"} topText="fkfk" bottomText="kkk"quoteText="Loska" imageRight={true}/>
+
     </div>
 
 }
