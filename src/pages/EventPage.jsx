@@ -64,7 +64,6 @@ function EventPage() {
   // backTo <- id of the section in the timeline to return back to
 
   useEffect(() => {
-    // TODO: Update the link to be dynamic
     // Step One: load json with data
     getJsonData(`${index}.json`).then((data) => {
       // Step Two: Use the data to make the page

@@ -1,7 +1,21 @@
+import { useState } from "react";
 import GlowLine from "../components/GlowLine/GlowLine";
 import Timeline from "../components/Timeline/Timeline";
+import { getJsonData } from "../utils/jsonParser";
 
-function TimelinePage({events}) {
+function TimelinePage() {
+    const [timeLine, setTimeLine] = useState(null);
+    useState(()=>{
+        getJsonData("events_summary.json").then((data)=>{
+            setTimeLine(<Timeline
+                events={data.events}
+                startYear={data.startYear}
+                startMonth={data.startMonth}
+                endYear={data.endYear}
+                endMonth={data.endMonth}
+            />)
+        });
+    },[])
   return (
     <div
       style={{
@@ -14,13 +28,14 @@ function TimelinePage({events}) {
       }}
       className="absolute"
     >
-      <Timeline
+      {/* <Timeline
         events={events}
         startYear={2003}
         startMonth={5}
         endYear={2030}
         endMonth={3}
-      />
+      /> */}
+      {timeLine}
       <div style={{ width: "100%" }} className="mt-14">
         <GlowLine
           settings={{
