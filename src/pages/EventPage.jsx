@@ -4,6 +4,8 @@ import EventTitle from "../components/EventTitle/EventTItle";
 import ImageDescription from "../components/ImageDescription/ImageDescription";
 import ImageQuoteLayout from "../components/layout/ImageQuoteLayout/ImageQuoteLayout";
 import QuoteLayout from "../components/layout/QuoteLayout/QuoteLayout";
+import SeparationLine from "../components/layout/SeparationLine/SeparationLine";
+
 
 function EventPage(){
 
@@ -13,6 +15,8 @@ function EventPage(){
             <EventLargeImage imageUrl={"pexels-phil-desforges-15185102.jpg"}/>
             <ImageDescription topText={"Text description"} bottomText={"Meh"}/>
         </div>
+
+        <SeparationLine/>
 
         <QuoteLayout quote="Quote"/>
 
