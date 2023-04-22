@@ -65,7 +65,7 @@ function EventPage() {
 
   useEffect(() => {
     // Step One: load json with data
-    getJsonData(`${index}.json`).then((data) => {
+    getJsonData(`events/${index}.json`).then((data) => {
       // Step Two: Use the data to make the page
       setPageContent(constructPageContent(data));
     });

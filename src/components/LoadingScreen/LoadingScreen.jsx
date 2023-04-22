@@ -27,7 +27,7 @@ function LoadingScreen(props) {
   }, []);
   return (
     <div
-      className="w-screen h-screen absolute"
+      className="w-screen h-screen absolute z-10"
       style={{ backgroundColor: "rgba(0,0,0,1)" }}
       id="loading-screen-background"
     >
