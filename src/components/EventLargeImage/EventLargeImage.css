@@ -1,6 +1,7 @@
 .outer-frame {
     border: 8px solid #e4f5f5;
     display: inline-block;
+    box-shadow: 0 0 3px #e4f5f5; 
     
   }
   

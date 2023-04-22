@@ -14,7 +14,7 @@ function ImageQuoteLayout({
       {imageRight ? (
         ""
       ) : (
-        <div className="w-[40vw] image-wrapper inline-block">
+        <div className="w-[40vw] image-wrapper inline-block px-5">
           <EventLargeImage imageUrl={imageUrl} />
           {topText ? (
             <ImageDescription topText={topText} bottomText={bottomText} />
@@ -28,7 +28,7 @@ function ImageQuoteLayout({
         {quoteText ? <EventQuote quoteText={quoteText} /> : ""}
       </div>
       {imageRight ? (
-        <div className="w-[40vw] image-wrapper inline-block">
+        <div className="w-[40vw] image-wrapper inline-block px-5">
           <EventLargeImage imageUrl={imageUrl} />
           {topText ? (
             <ImageDescription topText={topText} bottomText={bottomText} />

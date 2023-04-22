@@ -2,7 +2,7 @@ import GlowLine from "../../GlowLine/GlowLine";
 
 function SeparationLine() {
   return (
-    <div className="w-full mh-7 flex justify-center items-center">
+    <div className="w-full h-7 my-7 mb-14 flex justify-center items-center">
       <div className="w-[80%]">
         <GlowLine
           settings={{

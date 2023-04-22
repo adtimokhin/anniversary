@@ -1,0 +1,14 @@
+.floating-images-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .floating-image {
+    position: absolute;
+    width: auto;
+    height: 10%;
+    will-change: transform;
+  }
+  
