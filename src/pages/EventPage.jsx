@@ -9,6 +9,7 @@ import QuoteLayout from "../components/layout/QuoteLayout/QuoteLayout";
 import SeparationLine from "../components/layout/SeparationLine/SeparationLine";
 import { useParams } from "react-router";
 import { getJsonData } from "../utils/jsonParser";
+import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
 
 function constructPageContent(pageData) {
   let page = [];
@@ -59,13 +60,13 @@ function constructPageContent(pageData) {
 
 function EventPage() {
   const { index, backTo } = useParams();
-  const [pageContent, setPageContent] = useState(null);
+  const [pageContent, setPageContent] = useState(<LoadingSpinner/>);
   // backTo <- id of the section in the timeline to return back to
 
   useEffect(() => {
     // TODO: Update the link to be dynamic
     // Step One: load json with data
-    getJsonData("test.json").then((data) => {
+    getJsonData(`${index}.json`).then((data) => {
       // Step Two: Use the data to make the page
       setPageContent(constructPageContent(data));
     });
@@ -73,86 +74,7 @@ function EventPage() {
 
   return (
     <div className="bg-[#080808] min-h-screen w-screen">
-      {/* <EventTitle text={index} />
-
-      <EmptySpace />
-      <QuoteLayout quote="Quote" />
-      <FloatingImagesLayers
-        imageUrls={[
-          "../../pexels-phil-desforges-15185102.jpg",
-          "../../pexels-feyza-yıldırım-16407235.jpg",
-          "../../pexels-polina-kovaleva-5546810.jpg",
-          "../../pexels-satumbo-16462830.jpg",
-          "../../pexels-jhonny-salas-brochero-16041156.jpg",
-          "../../pexels-elif-kaya-13536123.jpg",
-          "../../pexels-polina-tankilevitch-6988658.jpg",
-          "../../pexels-ds-stories-6005016.jpg",
-          "../../pexels-jaime-reimer-15953915.jpg",
-          "../../pexels-sevil-yeva-15895540.jpg",
-        ]}
-      />
-
-      <ImageQuoteLayout
-        imageUrl={"../../pexels-phil-desforges-15185102.jpg"}
-        topText="Кот в мешке"
-        bottomText="хахаха смешно"
-        quoteText=""
-        imageRight={false}
-      />
-
-      <SeparationLine />
-
-      <QuoteLayout quote="Quote" />
-
-      <SeparationLine />
-
-      <ImageQuoteLayout
-        imageUrl={"../../pexels-phil-desforges-15185102.jpg"}
-        topText="Кот в мешке"
-        bottomText="хахаха смешно"
-        quoteText="Больно, друзья!"
-        imageRight={true}
-      />
-
-      <SeparationLine />
-
-      <ImageGallery
-        imageUrls={[
-          "../../pexels-phil-desforges-15185102.jpg",
-          "../../pexels-feyza-yıldırım-16407235.jpg",
-          "../../pexels-polina-kovaleva-5546810.jpg",
-          "../../pexels-satumbo-16462830.jpg",
-          "../../pexels-jhonny-salas-brochero-16041156.jpg",
-          "../../pexels-elif-kaya-13536123.jpg",
-          "../../pexels-polina-tankilevitch-6988658.jpg",
-          "../../pexels-ds-stories-6005016.jpg",
-          "../../pexels-jaime-reimer-15953915.jpg",
-          "../../pexels-sevil-yeva-15895540.jpg",
-          "../../pexels-phil-desforges-15185102.jpg",
-          "../../pexels-feyza-yıldırım-16407235.jpg",
-          "../../pexels-polina-kovaleva-5546810.jpg",
-          "../../pexels-satumbo-16462830.jpg",
-          "../../pexels-jhonny-salas-brochero-16041156.jpg",
-          "../../pexels-elif-kaya-13536123.jpg",
-          "../../pexels-polina-tankilevitch-6988658.jpg",
-          "../../pexels-ds-stories-6005016.jpg",
-          "../../pexels-jaime-reimer-15953915.jpg",
-          "../../pexels-sevil-yeva-15895540.jpg",
-          "../../pexels-phil-desforges-15185102.jpg",
-          "../../pexels-feyza-yıldırım-16407235.jpg",
-          "../../pexels-polina-kovaleva-5546810.jpg",
-          "../../pexels-satumbo-16462830.jpg",
-          "../../pexels-jhonny-salas-brochero-16041156.jpg",
-          "../../pexels-elif-kaya-13536123.jpg",
-          "../../pexels-polina-tankilevitch-6988658.jpg",
-          "../../pexels-ds-stories-6005016.jpg",
-          "../../pexels-jaime-reimer-15953915.jpg",
-          "../../pexels-sevil-yeva-15895540.jpg",
-        ]}
-      /> */}
-
       {pageContent}
-
       <ReturnToTimelineButton timelineId={backTo} />
     </div>
   );

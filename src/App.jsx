@@ -16,7 +16,7 @@ function App() {
               {
                 topText: "свадьба",
                 bottomText: "2003 АПР",
-                eventLink:"dojod",
+                eventLink:"test",
                 year: 2003,
                 month: 4,
                 settings: {
@@ -97,7 +97,7 @@ function App() {
                     {
                       topText: "свадьба",
                       bottomText: "2003 АПР",
-                      eventLink:"dojod",
+                      eventLink:"test",
                       year: 2003,
                       month: 4,
                       settings: {
