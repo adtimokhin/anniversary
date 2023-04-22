@@ -1,0 +1,35 @@
+.return-to-timeline-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .return-to-timeline-button {
+    font-size: 52px;
+    font-weight: 900;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .return-to-timeline-button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .return-to-timeline-button:active {
+    background-color: white;
+    color: black;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  

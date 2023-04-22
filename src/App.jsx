@@ -16,6 +16,7 @@ function App() {
               {
                 topText: "свадьба",
                 bottomText: "2003 АПР",
+                eventLink:"dojod",
                 year: 2003,
                 month: 4,
                 settings: {
@@ -28,6 +29,7 @@ function App() {
               {
                 topText: "Event 1",
                 bottomText: "2010",
+                eventLink:"Rotk",
                 year: 2010,
                 month: 3,
                 settings: {
@@ -40,6 +42,7 @@ function App() {
               {
                 topText: "Event 1",
                 bottomText: "2010",
+                eventLink:"Nugar",
                 year: 2010,
                 month: 4,
                 settings: {
@@ -52,18 +55,21 @@ function App() {
               {
                 topText: "Event 2",
                 bottomText: "2012",
+                eventLink:"Losksh",
                 year: 2012,
                 month: 5,
               },
               {
                 topText: "Event 3",
                 bottomText: "2015",
+                eventLink:"uyughf",
                 year: 2015,
                 month: 3,
               },
               {
                 topText: "Event 3",
                 bottomText: "2015",
+                eventLink:"Losksrrrrrh",
                 year: 2030,
                 month: 3,
               },
@@ -73,6 +79,8 @@ function App() {
       }}
     />
   );
+
+  // eventLink should be a unique name to the event
 
   return (
     <div className="App min-h-screen bg-[#080808]">
@@ -89,6 +97,7 @@ function App() {
                     {
                       topText: "свадьба",
                       bottomText: "2003 АПР",
+                      eventLink:"dojod",
                       year: 2003,
                       month: 4,
                       settings: {
@@ -101,6 +110,7 @@ function App() {
                     {
                       topText: "Event 1",
                       bottomText: "2010",
+                      eventLink:"Rotk",
                       year: 2010,
                       month: 3,
                       settings: {
@@ -113,6 +123,7 @@ function App() {
                     {
                       topText: "Event 1",
                       bottomText: "2010",
+                      eventLink:"Nugar",
                       year: 2010,
                       month: 4,
                       settings: {
@@ -125,18 +136,21 @@ function App() {
                     {
                       topText: "Event 2",
                       bottomText: "2012",
+                      eventLink:"Losksh",
                       year: 2012,
                       month: 5,
                     },
                     {
                       topText: "Event 3",
                       bottomText: "2015",
+                      eventLink:"uyughf",
                       year: 2015,
                       month: 3,
                     },
                     {
                       topText: "Event 3",
                       bottomText: "2015",
+                      eventLink:"Losksrrrrrh",
                       year: 2030,
                       month: 3,
                     },
@@ -146,7 +160,7 @@ function App() {
             }
           />
           <Route
-            path="/event/:index"
+            path="/event/:index/:backTo"
             element={ <EventPage />}
           />
         </Routes>
