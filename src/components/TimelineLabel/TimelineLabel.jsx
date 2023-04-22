@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./TimelineLabel.css";
+import { useNavigate } from "react-router-dom";
 
 const TimelineLabel = ({ topText, bottomText, settings }) => {
+  const navigate = useNavigate();
   const labelRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -38,7 +40,7 @@ const TimelineLabel = ({ topText, bottomText, settings }) => {
   }, []);
 
   const handleClick = () => {
-    console.log("Clicked");
+    navigate("/event/random");
   };
 
   const labelStyles = {
