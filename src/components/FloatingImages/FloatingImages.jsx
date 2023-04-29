@@ -62,6 +62,7 @@ const FloatingImages = ({ imageUrls, size }) => {
               height: `${randomHeight}%`,
               width: "auto",
             }}
+            draggable={false}
           />
         );
       })}

@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './ImageGallery.css';
+import React, { useEffect, useRef, useState } from "react";
+import "./ImageGallery.css";
+import PopupImage from "../PopupImage/PopupImage";
 
-const ImageGalleryItem = ({ imageUrl }) => {
+const ImageGalleryItem = ({ imageUrl, onClickParent }) => {
   const imgRef = useRef();
   const [loaded, setLoaded] = useState(false);
 
@@ -37,17 +38,35 @@ const ImageGalleryItem = ({ imageUrl }) => {
   return (
     <img
       ref={imgRef}
-      className={`gallery-image ${loaded ? 'loaded' : 'placeholder'}`}
+      className={`gallery-image ${loaded ? "loaded" : "placeholder"}`}
+      draggable={false}
     />
   );
 };
 
 const ImageGallery = ({ imageUrls }) => {
+  const [popup, setPopup] = useState(null);
+
+  function handleClickChild(imageRef) {
+    setPopup(<PopupImage expandedImage={imageRef} onClose={() => {setPopup(null);}} />);
+  }
   return (
     <div className="image-gallery m-14">
+      {popup}
       {imageUrls.map((url, index) => (
-        <div key={index} className="image-container">
-          <ImageGalleryItem imageUrl={url} />
+        <div
+          key={index}
+          className="image-container"
+          onClick={() => {
+            handleClickChild(url);
+          }}
+        >
+          <ImageGalleryItem
+            imageUrl={url}
+            onClickParent={(imageRef) => {
+              handleClickChild(imageRef);
+            }}
+          />
           <div className="z-30 absolute top-0 left-0 h-full w-full foreshadow"></div>
         </div>
       ))}
@@ -56,6 +75,5 @@ const ImageGallery = ({ imageUrls }) => {
 };
 
 export default ImageGallery;
-
 
 // <div className="z-30 absolute top-0 left-0 h-full w-full foreshadow"></div>

@@ -29,6 +29,7 @@
 .foreshadow:hover {
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0);
   transition: box-shadow 0.3s ease-in;
+  cursor: pointer;
 }
 
 .gallery-image.placeholder {
