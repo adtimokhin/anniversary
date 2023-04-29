@@ -6,7 +6,7 @@ const ReturnToTimelineButton = ({ timelineId }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/#${timelineId}`);
+    navigate(`/anniversary/#${timelineId}`);
   };
 
   return (

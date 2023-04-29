@@ -10,6 +10,7 @@ import SeparationLine from "../components/layout/SeparationLine/SeparationLine";
 import { useParams } from "react-router";
 import { getJsonData } from "../utils/jsonParser";
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
+import VideoYoutubePlayer from "../components/layout/VideoYoutubePlayer/VideoYoutubePlayer";
 
 function constructPageContent(pageData) {
   let page = [];
@@ -48,6 +49,9 @@ function constructPageContent(pageData) {
         break;
       case "eventTitle":
         page.push(<EventTitle text={data[0]} key={elementIndex} />);
+        break;
+      case "video":
+        page.push(<VideoYoutubePlayer videoId={data[0]}/>);
         break;
       default:
         break;

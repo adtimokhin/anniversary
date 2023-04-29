@@ -40,7 +40,7 @@ const TimelineLabel = ({ topText, bottomText, settings, labelId, eventLink }) =>
   }, []);
 
   const handleClick = () => {
-    navigate(`/event/${eventLink}/${labelId}`);
+    navigate(`/anniversary/event/${eventLink}/${labelId}`);
   };
 
   const labelStyles = {

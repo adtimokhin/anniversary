@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://adtimokhin.github.io/anniversary/",
   "scripts": {
     "dev": "npm install\nvite",
     "build": "vite build",

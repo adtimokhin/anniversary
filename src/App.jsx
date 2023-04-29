@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App min-h-screen bg-[#080808]">
-      {/* <LoadingScreen
+      <LoadingScreen
         atEnd={() => {
           const loadingScreen = document.getElementById(
             "loading-screen-background"
@@ -22,12 +22,12 @@ function App() {
             loadingScreen.remove();
           }
         }}
-      /> */}
+      />
       <BrowserRouter>
         <Routes>
           <Route
             exact
-            path="/"
+            path="/anniversary/"
             element={
               <div className="w-[20000px] h-screen bg-[#080808]">
                 {/* TODO: Replace with {currentPage} when finished testing */}
@@ -35,7 +35,7 @@ function App() {
               </div>
             }
           />
-          <Route path="/event/:index/:backTo" element={<EventPage />} />
+          <Route path="/anniversary/event/:index/:backTo" element={<EventPage />} />
         </Routes>
       </BrowserRouter>
     </div>
