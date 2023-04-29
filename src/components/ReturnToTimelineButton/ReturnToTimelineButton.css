@@ -8,7 +8,7 @@
   .return-to-timeline-button {
     font-size: 52px;
     font-weight: 900;
-    background-color: black;
+    background-color: #080808;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -23,12 +23,12 @@
   
   .return-to-timeline-button:hover {
     background-color: white;
-    color: black;
+    color: #080808;
   }
   
   .return-to-timeline-button:active {
     background-color: white;
-    color: black;
+    color: #080808;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
